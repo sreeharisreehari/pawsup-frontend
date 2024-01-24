@@ -1,38 +1,55 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.container1 {
+    display: flex;
+    justify-content: center;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .column1 {
+    width: 200px;
+    height: 80px;
+    margin: 10px; /* Adjust the margin as needed */
+    background-color: #01bbef;
+    border-radius: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .column2 {
+    width: 200px;
+    height: 80px;
+    margin: 10px; /* Adjust the margin as needed */
+    background-color: #FFC72C;
+    border-radius: 10px;
   }
-}
+
+  .column3 {
+    width: 200px;
+    height: 80px;
+    margin: 10px; /* Adjust the margin as needed */
+    background-color: rgb(53, 184, 53);
+    border-radius: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .container1  {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .card {
+    transition: transform 0.3s;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
+  
+   
+  }
+  
+  .card:hover {
+    transform: scale(1.08); 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
+  
+  } 
+  .imgg{
+    background-image: url('https://images.freeimages.com/images/large-previews/a3b/website-rays-background-pattern-1637863.png');
+  }
+  .imggg{
+    background-image: url('https://images.unsplash.com/photo-1632421377339-2f7efe70e77a?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  }
+  
