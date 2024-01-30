@@ -157,7 +157,7 @@ const reqheader={
 
 
   return (
-    <div className='imgg'>
+    <div className='imgg scroll-container '>
          <Headersss/> 
         <br />
         
@@ -166,9 +166,13 @@ const reqheader={
         <br />
 
         <center>   <h2>Home is Where the Fur is: Rehome Today!</h2></center>
-        <br />
+<Link to={'/edit'}>
+          <i style={{float:'right',color:'black'}} class="fa-solid fa-clock-rotate-left fa-2x me-5"></i>
+  
+</Link>        <br />
         
        <center> <h4 className='text-info'>fill this form</h4></center>
+  
        <br />
 
 
@@ -182,7 +186,7 @@ const reqheader={
                 <label  >
                     <input type="file" style={{display:'none'}} onChange={(e)=>setaddpet({...addpet,image:e.target.files[0]})} />
                     {/* target.files are used to access a file or image. */}
-                    <img width={'200px'} height={'200px'} src={preview?preview:"http://cdn.onlinewebfonts.com/svg/img_94880.png"} className=' justify-content-center' alt="" value={addpet.image}  />
+                    <img width={'180px'} height={'200px'} src={preview?preview:"http://cdn.onlinewebfonts.com/svg/img_94880.png"} className=' justify-content-center' alt="" value={addpet.image}  />
                 </label>
            </center>
           
@@ -306,14 +310,18 @@ const reqheader={
                                 </div>
     
             </Col>
+           
           </Row>
           </div>
       </center>
+   
     </Container>
+    
+   
     <br />
     <br />
     <br />
-    <Link className='me-5'  style={{textDecoration:'none',color:'black',float:'right',}} to={'/edit'}><button style={{float:'right'}} className='btn btn-primary '>Previous Applications <i class="fa-solid fa-arrow-right"></i></button></Link>
+    
 
     <br />
     <br />

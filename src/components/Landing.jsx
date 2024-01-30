@@ -1,25 +1,40 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import {Row,Col, Card} from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import titleimage from '../images/picmix.com_1628533.gif'
 import Button from 'react-bootstrap/Button';
 import Footer from '../components/Footer' 
+import { isauthtokencontext } from '../context/Contextshare';
 // import Footer from './components/Footer';
 
 
 
 function Landing() {
+  const {authtoken,setauthtoken}=useContext(isauthtokencontext)
+
+
+
+  useEffect(()=>{
+
+    if(sessionStorage.getItem("token")){
+
+
+      setauthtoken(true)
+    }
+
+  })
   return (
-    <div>
+    <div className='imgg scroll-container '  >
        <div style={{width:'100%',height:'80vh'}}>
        <Row className='align-items-center p-5'>
             <Col  sm={12} md={6}>
               <h3 style={{fontSize:'70px',color:'black'}}>Paws <span style={{color:"#FFD700"}}>Up</span></h3>
               <p>Find Your Furry Friend: Where Tails Begin New Tales. Adopt, Love, Rehome.</p>
           
-             {/* <Link to={'/dashboard'} className='btn btn-dark rounded'>Manage Projects<i class="fa-solid fa-arrow-right ms-3"></i> </Link> : */}
+        
               <Link to={'/login'} className='btn btn-dark rounded'>Get Started<i class="fa-solid fa-arrow-right ms-3"></i> </Link>
             </Col>
+            
             <Col sm={12} md={6}>
               <img src={titleimage} alt="" className='w-75' />
             </Col>
@@ -28,6 +43,7 @@ function Landing() {
        </div>
        <br />
        <br />
+       
        
       <center> <h1>Your Pet Adoption Journey With Paws Up</h1></center>
        

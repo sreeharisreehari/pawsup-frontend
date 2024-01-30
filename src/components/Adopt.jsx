@@ -45,7 +45,7 @@ function Adopt() {
   
 
   return (
-    <div className='imgg'>
+    <div className='imgg scroll-container '>
         <Headersss/>
         <br />
         <br />
@@ -79,7 +79,7 @@ function Adopt() {
     
     {
       petadopt?.length>0?
-      petadopt.map((item)=>(  <div class="col-md-3 mb-4">
+      petadopt.map((item)=>(  <div class="col-md-4 mb-4" md={6} sm={12} lg={4}>
       <Card  className='card' style={{ width: '18rem' }}>
         <Card.Img height={'200px'} variant="top" src={`${BASE_URL}/uploads/${item.image}`} />
         <Card.Body>

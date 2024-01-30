@@ -27,7 +27,7 @@ const {authtoken,setauthtoken}=useContext(isauthtokencontext)
 
     const handleregister=async(e)=>{
         e.preventDefault()
-        // then destructure the content
+        
 
         const {username,email,password}=userdata
 
@@ -129,14 +129,13 @@ const {authtoken,setauthtoken}=useContext(isauthtokencontext)
 
    
   return (
-    <div>
+    <div className='imgg scroll-container '>
        <div className='d-flex justify-content-center align-items-center' style={{width:'100%',height:'100vh'}}>
         
         <div className='w-75 container' >
-        <Link style={{textDecoration:'none',color:'black'}} to={'/'}><i class="fa-solid fa-arrow-left"></i>Back to Landing page</Link>
             <Row >
-                <Col className='me-5'>
-                <img style={{marginLeft:'-50px'}} className='mt-5 ' src="https://cdn.dribbble.com/users/3349387/screenshots/8249095/media/2323a82bb8d36cc3f6fc835c33f5801a.gif" alt="" width={'120%'}  />
+                <Col md={6} sm={12} className='me-5'>
+                <img  className='mt-5 ' src="https://cdn.dribbble.com/users/3349387/screenshots/8249095/media/2323a82bb8d36cc3f6fc835c33f5801a.gif" alt="" width={'110%'}  />
 
                 </Col>
                 <Col className='ms-5'>

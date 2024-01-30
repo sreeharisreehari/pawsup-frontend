@@ -136,7 +136,7 @@ const navigate=useNavigate()
  
   return (
 <>
-      <div className='imgg'>
+      <div className='imgg scroll-container '>
         {/* <Headersss/> */}
         <Navbar className="imgg">
       <Container>

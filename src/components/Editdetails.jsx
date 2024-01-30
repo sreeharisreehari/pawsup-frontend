@@ -16,7 +16,7 @@ function Editdetails() {
   const { addpetresponse, setaddpetresponse } = useContext(addpetresponsecontext);
 
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 4; 
+  const itemsPerPage = 3; 
 
   const getuserpet = async () => {
     const token = sessionStorage.getItem('token');
@@ -57,13 +57,13 @@ function Editdetails() {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
-    <div className='imgg'>
+    <div className='imgg '>
       <Headersss />
       <Container>
         <Row>
-          {/* First Column */}
+         
           <Col xs={12} md={2}>
-            {/* ... (unchanged) */}
+           
             <br />
           <br />
            <br />
@@ -112,7 +112,7 @@ function Editdetails() {
             </div>
           </Col>
           <Col xs={12} md={2}>
-            {/* ... (unchanged) */}
+           
             <br />
            <br />
            <br />
@@ -122,7 +122,7 @@ function Editdetails() {
         </Row>
       </Container>
 
-      {/* Pagination */}
+      
       <div className="d-flex justify-content-center mt-4">
         <Button variant="primary" onClick={() => paginate(currentPage - 1)} disabled={currentPage === 1}>
           Previous
@@ -140,7 +140,7 @@ function Editdetails() {
       </div>
 
       <Modal show={show} onHide={handleClose} animation={false}>
-        {/* ... (unchanged) */}
+       
       </Modal>
 
       <br />

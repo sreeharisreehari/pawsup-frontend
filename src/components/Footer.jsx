@@ -17,10 +17,10 @@ function Footer() {
 
           </div>
           <div className="col-lg-3 d-flex flex-column ">
-            <h4 >Pages</h4>
-            <Link style={{textDecoration:'none'}} to={'./'}>  Landing Page</Link>
-            <Link style={{textDecoration:'none'}} to={'./home'}>Home</Link>
-            <Link style={{textDecoration:'none'}} to={'./home'}>Login</Link>
+            <h4 >Services</h4>
+            <Link style={{textDecoration:'none'}} >  Adoption</Link>
+            <Link style={{textDecoration:'none'}} >Rehoming</Link>
+            <Link style={{textDecoration:'none'}} >24/7 Support</Link>
            
 
           </div>

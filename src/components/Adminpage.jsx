@@ -112,7 +112,7 @@ function Adminpage() {
 
   
   return (
-    <div className='imgg'>
+    <div className='imgg scroll-container '>
          <Navbar className="imgg">
       <Container>
         <Navbar.Brand href="#home"> <h4 style={{color:'black'}} ><i class="fa-solid fa-paw me-1"></i> Paws <span style={{color:'#FFD700'}}>Up</span></h4></Navbar.Brand>
@@ -138,15 +138,15 @@ function Adminpage() {
         </center>
       </div>
       <div className="column2">
-      <center><h5 className='mt-2' style={{color:'white'}}>Applications</h5>
+      <center><h5 className='mt-2' style={{color:'white'}}>Users</h5>
         
-        <h2 >{userss}</h2>
+        <h2 >{lungth}</h2>
         </center>
       </div>
       <div className="column3 ms-5">
-      <center><h5 className='mt-2' style={{color:'white'}}>Pets</h5>
+      <center><h5 className='mt-2' style={{color:'white'}}> Applications</h5>
         
-        <h2 >{lungth}</h2>
+        <h2 >{userss}</h2>
         </center>
       </div>
     </div>
@@ -190,9 +190,7 @@ function Adminpage() {
 
     <br />
     <br />
-    <br />
-    <br />
-    <br />
+    
    
 
       
