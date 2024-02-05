@@ -11,6 +11,8 @@ import { adoptAPI } from '../services/allAPI';
 import Display from './Display';
 import { BASE_URL } from '../services/baseurl';
 import Mesg from './Mesg';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 
 function Adopt() {
   const [petsearch,setpetsearch]=useState("")
@@ -42,6 +44,14 @@ function Adopt() {
     getpet()
 
   },[petsearch])
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+      once: false, 
+    });
+  }, []); 
+  
   
 
   return (
@@ -67,15 +77,11 @@ function Adopt() {
      
      
      
-    {/* <center>
-      
-    
-       <input   style={{borderRadius:'10px',height:'35px'}} className='form-control w-75 ' type="text"  placeholder='search pets' /></center>
-    <br /> */}
+   
     <br />
 
-     <div class="container mt-4">
-  <div class="row">
+     <div  class="container mt-4">
+  <div data-aos="fade-up" class="row">
     
     {
       petadopt?.length>0?

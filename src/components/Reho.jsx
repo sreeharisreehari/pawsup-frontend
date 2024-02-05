@@ -7,6 +7,8 @@ import Footer from './Footer';
 import { addAPI } from '../services/allAPI';
 import { addpetresponsecontext } from '../context/Contextshare';
 import Swal from 'sweetalert2';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 
 
 function Reho() {
@@ -154,6 +156,14 @@ const reqheader={
 
   }
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+      once: true, 
+    });
+  }, []); 
+  
+
 
 
   return (
@@ -178,7 +188,7 @@ const reqheader={
 
        <Container>
       <center>
-           <div className='w-75 bg-light'  style={{ border: '1px solid #ccc', padding: '20px', borderRadius: '20px' }} >
+           <div data-aos="fade-up" className='w-75 bg-light'  style={{ border: '1px solid #ccc', padding: '20px', borderRadius: '20px' }} >
           <Row className="justify-content-md-center">
             
             <Col xs={4} md={4}>

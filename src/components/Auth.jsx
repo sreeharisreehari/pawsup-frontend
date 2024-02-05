@@ -1,10 +1,12 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import { Link, useNavigate } from 'react-router-dom'
 import Form from 'react-bootstrap/Form';
 import { loginAPI, registerAPI } from '../services/allAPI';
 import { isauthtokencontext } from '../context/Contextshare';
 import Swal from 'sweetalert2';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 
 
 function Auth({register}) {
@@ -85,7 +87,7 @@ const {authtoken,setauthtoken}=useContext(isauthtokencontext)
                 const result=await loginAPI(userdata)
                 console.log(result);
                 console.log(result.data.existuser.username);
-                if (result.data.existuser.username=="admin" && result.data.existuser.password=="admin123" && result.data.existuser.email == "admin@gmail.com") {
+                if (result.data.existuser.username=="admin" && result.data.existuser.password=="sreenic123" && result.data.existuser.email == "sreenic@gmail.com") {
                     navigate('/admin')
                     
                 }
@@ -124,6 +126,14 @@ const {authtoken,setauthtoken}=useContext(isauthtokencontext)
 
         }
 
+        useEffect(() => {
+            AOS.init({
+              duration: 1000, 
+              once: false, 
+            });
+          }, []);
+          
+
   
 
 
@@ -134,11 +144,11 @@ const {authtoken,setauthtoken}=useContext(isauthtokencontext)
         
         <div className='w-75 container' >
             <Row >
-                <Col md={6} sm={12} className='me-5'>
+                <Col  data-aos="fade-right" md={6} sm={12} className='me-5'>
                 <img  className='mt-5 ' src="https://cdn.dribbble.com/users/3349387/screenshots/8249095/media/2323a82bb8d36cc3f6fc835c33f5801a.gif" alt="" width={'110%'}  />
 
                 </Col>
-                <Col className='ms-5'>
+                <Col  data-aos="fade-left" className='ms-5'>
                 <h1 style={{color:'black'}} className='ms-5'><i class="fa-solid fa-paw me-1"></i>Paws <span style={{color:'#FFD700'}}>Up</span></h1>
                 <h5 className='ms-5 mt-4'>{
                    
@@ -180,7 +190,7 @@ const {authtoken,setauthtoken}=useContext(isauthtokencontext)
                 </Col>
             </Row>
         </div>
-        {/* <ToastContainer autoclose={2000} theme='colored' position='top-center'/> */}
+       
          
     </div>
     </div>

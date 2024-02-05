@@ -6,15 +6,7 @@ import Navbar from 'react-bootstrap/Navbar';
 function Headersss() {
   return (
     <div>
-         {/* <Navbar className="bg-body-tertiary">
-      <Container>
-        <Navbar.Brand href="#home"> <h4 style={{color:'black'}} ><i class="fa-solid fa-paw me-1"></i> Paws <span style={{color:'#FFD700'}}>Up</span></h4></Navbar.Brand>
-        <Navbar.Toggle />
-        <Navbar.Collapse className="justify-content-end">
-          
-        </Navbar.Collapse>
-      </Container>
-    </Navbar> */}
+        
      <Navbar className="imgg">
       <Container className="d-flex justify-content-center">
         <Navbar.Brand  href="#">

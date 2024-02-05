@@ -14,6 +14,8 @@ import { isadmintokencontext } from '../context/Contextshare';
 import Chartedac from './Chartedac';
 import PieChartExample from './Chartedac';
 import { useNavigate } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 
 
 
@@ -106,6 +108,15 @@ function Adminpage() {
       },[])
       const lungth=regi.length
 
+
+      useEffect(() => {
+        AOS.init({
+          duration: 1000, 
+          once: false, 
+        });
+      }, []); 
+      
+
       
 
 
@@ -130,20 +141,20 @@ function Adminpage() {
     <br />
     <br />
     <div className="container1">
-      <div className="column1 me-5">
+      <div data-aos="flip-up" className="column1 me-5">
        
         <center><h5 className='mt-2' style={{color:'white'}}>Pets</h5>
         
         <h2 >{userss}</h2>
         </center>
       </div>
-      <div className="column2">
+      <div data-aos="flip-up" className="column2">
       <center><h5 className='mt-2' style={{color:'white'}}>Users</h5>
         
         <h2 >{lungth}</h2>
         </center>
       </div>
-      <div className="column3 ms-5">
+      <div data-aos="flip-up" className="column3 ms-5">
       <center><h5 className='mt-2' style={{color:'white'}}> Applications</h5>
         
         <h2 >{userss}</h2>
@@ -195,7 +206,7 @@ function Adminpage() {
 
       
 
-    <Footer/>
+   
     </div>
   )
 }

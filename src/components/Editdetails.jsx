@@ -9,6 +9,8 @@ import { deleteAPI, editAPI } from '../services/allAPI';
 import { addpetresponsecontext, editpetresponsecontext } from '../context/Contextshare';
 import Maran from './Maran';
 import Footer from './Footer';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 
 function Editdetails() {
   const [updatepet, setupdatepet] = useState([]);
@@ -56,6 +58,13 @@ function Editdetails() {
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+      once: true, 
+    });
+  }, []); 
+
   return (
     <div className='imgg '>
       <Headersss />
@@ -84,7 +93,7 @@ function Editdetails() {
          
           </Col>
           <Col xs={12} md={8} className="d-flex align-items-center justify-content-center">
-            <div style={{ padding: '40px', textAlign: 'center' }}>
+            <div  data-aos="flip-right" style={{ padding: '40px', textAlign: 'center' }}>
               <br />
               <br />
               <div className="card shadow p-4 ">

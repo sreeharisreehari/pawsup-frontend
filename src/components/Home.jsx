@@ -1,3 +1,5 @@
+
+
 import React, { useContext, useEffect } from 'react'
 import Headersss from './Headersss'
 import {Row,Col, Card} from 'react-bootstrap'
@@ -11,12 +13,14 @@ import { isauthtokencontext } from '../context/Contextshare'
 import { BASE_URL } from '../services/baseurl';
 import { proAPI } from '../services/allAPI'
 import Swal from 'sweetalert2'
+import AOS from 'aos';
+ import 'aos/dist/aos.css'; 
 
 
 
 
 
-// import Footer from '../components/Footer' 
+
 
 function Home() {
 const [userprofile,setuserprofile]=useState({
@@ -132,12 +136,18 @@ const navigate=useNavigate()
 
   }
 }
+useEffect(() => {
+     AOS.init({
+    duration: 1000, 
+    once: true, 
+  });
+   }, []); 
 
  
   return (
 <>
       <div className='imgg scroll-container '>
-        {/* <Headersss/> */}
+       
         <Navbar className="imgg">
       <Container>
         <Navbar.Brand className='mx-auto' href="#home"> <h4 style={{color:'black'}} ><i class="fa-solid fa-paw me-1"></i> Paws <span style={{color:'#FFD700'}}>Up</span></h4></Navbar.Brand>
@@ -171,7 +181,7 @@ const navigate=useNavigate()
       <div class="col-sm-8 text-center">
       <center>
        <Link style={{textDecoration:'none'}} to={'/adopt'}>
-            <div  style={{height:'200px',borderRadius:'10px',backgroundColor:'#32de84'}} >
+            <div  data-aos="zoom-in-right" style={{height:'200px',borderRadius:'10px',backgroundColor:'#32de84'}} >
               <br />
               
               
@@ -189,7 +199,7 @@ const navigate=useNavigate()
     <br />
 
     <Link style={{textDecoration:'none'}} to={'/rehome'}>
-      <div style={{height:'200px',borderRadius:'10px',backgroundColor:'#1CAC78'}} >
+      <div data-aos="zoom-in-right" style={{height:'200px',borderRadius:'10px',backgroundColor:'#1CAC78'}} >
               <br />
               
               
@@ -210,7 +220,7 @@ const navigate=useNavigate()
         <br />
         
         
-      <div className='card shadow p-3  ms-5'>
+      <div data-aos="flip-right" className='card shadow p-3  ms-5'>
     <div className='d-flex justify-content-between align-item-center'>
         <h4> <i class="fa-solid fa-user"></i>  Profile  </h4>
               <button onClick={() => setOpen(!open)} className='btn btn-outline-info'><i  class="fa-solid fa-right-from-bracket fa-rotate-90"></i></button>

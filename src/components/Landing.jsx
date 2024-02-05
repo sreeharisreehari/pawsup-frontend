@@ -5,7 +5,10 @@ import titleimage from '../images/picmix.com_1628533.gif'
 import Button from 'react-bootstrap/Button';
 import Footer from '../components/Footer' 
 import { isauthtokencontext } from '../context/Contextshare';
-// import Footer from './components/Footer';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+import Foooooter from './Foooooter';
 
 
 
@@ -22,10 +25,20 @@ function Landing() {
       setauthtoken(true)
     }
 
+   
+
   })
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+      once: false, 
+    });
+  }, []); 
+  
   return (
     <div className='imgg scroll-container '  >
-       <div style={{width:'100%',height:'80vh'}}>
+       <div  data-aos="fade-up" style={{width:'100%',height:'80vh'}}>
        <Row className='align-items-center p-5'>
             <Col  sm={12} md={6}>
               <h3 style={{fontSize:'70px',color:'black'}}>Paws <span style={{color:"#FFD700"}}>Up</span></h3>
@@ -47,8 +60,8 @@ function Landing() {
        
       <center> <h1>Your Pet Adoption Journey With Paws Up</h1></center>
        
-       <div className='container mt-5' >
-       <Row>
+       <div  className='container mt-5' >
+       <Row data-aos="zoom-out">
   <Col  md={6} sm={12}>
     <img className='' src="https://cityofmissionviejo.org/sites/default/files/cutedogsrabiesdefer3.png" alt="" width={'80%'}  />
 
@@ -86,7 +99,8 @@ function Landing() {
     <br />
     <br />
     <br />
-    <Footer/>
+    <Foooooter/>
+   
 
     </div>
   )
